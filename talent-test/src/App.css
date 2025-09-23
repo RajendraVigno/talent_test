@@ -26,6 +26,10 @@
   font-size: calc(10px + 2vmin);
   color: white; */
 }
+.buttonmenu
+{
+  @apply text-yellow-500 rounded-none bg-black border-l-2 border-yellow-500
+}
 
 /* .App-link {
   color: #61dafb;
