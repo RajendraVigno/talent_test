@@ -82,25 +82,25 @@ const handleMenuCLick = (e) => {
     </div>
      <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Admission Enquiry </button>
+          <Link to="/admissionenquiry"className="hover:text-yellow-500 text-white"> &#187; Admission Enquiry </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Visitor Book </button>
+          <Link to="/visitorbook" className="hover:text-yellow-500 text-white"> &#187; Visitor Book </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">&#187; Phone Call Log </button>
+          <Link to="/phonecalllog" className="hover:text-yellow-500 text-white">&#187; Phone Call Log </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Postal Dispatch </button>
+          <Link to="postaldispatch" className="hover:text-yellow-500 text-white"> &#187; Postal Dispatch </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Postal Receive </button>
+          <Link to="/postalreceive" className="hover:text-yellow-500 text-white"> &#187; Postal Receive </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Complain </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Complain </Link>
         </div>
         <div className="mt-1 mb-2">
-          <button className="hover:text-yellow-500 text-white"> &#187; Setup Front Office </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Setup Front Office </Link>
         </div>
       </div>
     </div>
@@ -118,31 +118,31 @@ const handleMenuCLick = (e) => {
   </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Student Details </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Student Details </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Student Admission </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Student Admission </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Online Admission </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Online Admission </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Disabled Students </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Disabled Students </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Multi Class Student </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Multi Class Student </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Bulk Delete </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Bulk Delete </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Student Categories </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Student Categories </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Student House </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Student House </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Disable Reason </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Disable Reason </Link>
         </div>
       </div>
     </div>
@@ -160,37 +160,37 @@ const handleMenuCLick = (e) => {
       <span className="hidden collapser relative top-[-0.2rem] ml-20 px-2"> &#8964;</span>
     </div><div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Collect Fees </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Collect Fees </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Offline Bank Payments </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Offline Bank Payments </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Search Fee Payment </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Search Fee Payment </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Search Due Fees </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Search Due Fees </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Fees Master </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Fees Master </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Quick Fees </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Quick Fees </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Fees Group </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Fees Group </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Fees Type </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Fees Type </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Fees Discount </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Fees Discount </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Fees Carry Forward </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Fees Carry Forward </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Fees Reminder </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Fees Reminder </Link>
         </div>
       </div>
     </div>
@@ -208,22 +208,22 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Online Course </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Online Course </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Offline Payment </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Offline Payment </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Course Category </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Course Category </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Question Bank </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Question Bank </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Online Course Receipt </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Online Course Receipt </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Setting </Link>
         </div>
       </div>
     </div>
@@ -241,13 +241,13 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Overview </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Overview </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Report </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Report </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Setting </Link>
         </div>
       </div>
     </div>
@@ -264,19 +264,19 @@ const handleMenuCLick = (e) => {
       <span className="hidden collapser relative top-[-0.2rem] ml-12 px-3"> &#8964;</span>
     </div><div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Live Classes </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Live Classes </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Live Meeting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Live Meeting </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Live Classes Report </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Live Classes Report </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Live Meeting Report </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Live Meeting Report </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Setting </Link>
         </div>
       </div>
     </div>
@@ -293,19 +293,19 @@ const handleMenuCLick = (e) => {
       <span className="hidden collapser relative top-[-0.2rem] ml-16"> &#8964;</span>
     </div><div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Live Classes </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Live Classes </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Live Meeting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Live Meeting </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Live Classes Report </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Live Classes Report </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Live Meeting Report </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Live Meeting Report </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Setting </Link>
         </div>
       </div>
     </div>
@@ -324,16 +324,16 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Assign Incident </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Assign Incident </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Incidents </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Incidents </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Reports </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Reports </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Setting </Link>
         </div>
       </div>
     </div>
@@ -352,13 +352,13 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Add Income </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Add Income </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Search Income </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Search Income </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Income Head </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Income Head </Link>
         </div>
       </div>
     </div>
@@ -377,13 +377,13 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
          <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Add Expense </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Add Expense </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Search Expense </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Search Expense </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Expense Head </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Expense Head </Link>
         </div>
       </div>
     </div>
@@ -401,40 +401,40 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Exam </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Exam </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Exam Schedule </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Exam Schedule </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Print Marksheet </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Print Marksheet </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Exam Grade </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Exam Grade </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Assign Observation </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Assign Observation </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Observation </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Observation </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Observation Parameter </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Observation Parameter </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Assessment </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Assessment </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Term </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Term </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Template </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Template </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Reports </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Reports </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Setting </Link>
         </div>
       </div>
     </div>
@@ -452,31 +452,31 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Exam group </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Exam group </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Exam Schedule </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Exam Schedule </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Exam Result</button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Exam Result</Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Design Admit Card </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Design Admit Card </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Print Admit Card </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Print Admit Card </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Design Marksheet </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Design Marksheet </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Print Marksheet </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Print Marksheet </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Marks Grade </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Marks Grade </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Marks Division </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Marks Division </Link>
         </div>
       </div>
     </div>
@@ -495,13 +495,13 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Student Attendance </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Student Attendance </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Approve Leave </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Approve Leave </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Attendance By Date </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Attendance By Date </Link>
         </div>
       </div>
     </div>
@@ -526,10 +526,10 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Attendance </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Attendance </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Setting </Link>
         </div>
       </div>
     </div>
@@ -547,10 +547,10 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Online Exam </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Online Exam </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Question Bank </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Question Bank </Link>
         </div>
       </div>
     </div>
@@ -570,28 +570,28 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Class TimeTable </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Class TimeTable </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Teachers TImeTable </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Teachers TImeTable </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Assign Class Teacher </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Assign Class Teacher </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Promote Students </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Promote Students </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Subject Group </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Subject Group </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Subjects </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Subjects </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Class </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Class </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Sections </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Sections </Link>
         </div>
       </div>
     </div>
@@ -611,10 +611,10 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Annual Calendar </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Annual Calendar </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Holiday Type </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Holiday Type </Link>
         </div>
       </div>
     </div>
@@ -632,19 +632,19 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Copy Old Lessons </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Copy Old Lessons </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Manage Lesson Plan </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Manage Lesson Plan </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Manage Syllabus Status </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Manage Syllabus Status </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Lesson </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Lesson </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Topic </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Topic </Link>
         </div>
       </div>
     </div>
@@ -665,31 +665,31 @@ const handleMenuCLick = (e) => {
           <Link to="/hrstaff" className="hover:text-yellow-500 text-white"> &#187; Staff Directory </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Staff Attendance </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Staff Attendance </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Payroll </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Payroll </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Approve Leave Request </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Approve Leave Request </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Apply Leave </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Apply Leave </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Leave Type </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Leave Type </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Teachers Rating </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Teachers Rating </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Department </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Department </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Designation </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Designation </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Disabled Staff </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Disabled Staff </Link>
         </div>
       </div>
     </div>
@@ -707,28 +707,28 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Notice Board </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Notice Board </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Send Email </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Send Email </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Send SMS </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Send SMS </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Email/SMS Log </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Email/SMS Log </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Schedule Email SMS Log </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Schedule Email SMS Log </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Login Credentials Send </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Login Credentials Send </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Email Template </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Email Template </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; SMS Template </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; SMS Template </Link>
         </div>
       </div>
     </div>
@@ -748,16 +748,16 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Content Type </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Content Type </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Content Share List </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Content Share List </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Upload/Share Content </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Upload/Share Content </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Video Tutorial </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Video Tutorial </Link>
         </div>
       </div>
     </div>
@@ -776,10 +776,10 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Add Homework </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Add Homework </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Daily Assignment </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Daily Assignment </Link>
         </div>
       </div>
     </div>
@@ -797,16 +797,16 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Book List </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Book List </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Issue - Return </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Issue - Return </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Add Student </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Add Student </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Add Staff Member </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Add Staff Member </Link>
         </div>
       </div>
     </div>
@@ -826,22 +826,22 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Issue Item </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Issue Item </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Add Item Stock </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Add Item Stock </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Add Item </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Add Item </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Item Category </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Item Category </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Item Store </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Item Store </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Item Supplier </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Item Supplier </Link>
         </div>
       </div>
     </div>
@@ -859,10 +859,10 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Build CV </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Build CV </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Download CV </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Download CV </Link>
         </div>
       </div>
     </div>
@@ -882,25 +882,25 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Fees Master </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Fees Master </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Pickup Point </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Pickup Point </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Routes </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Routes </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Vehicles </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Vehicles </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Assign Vehicle </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Assign Vehicle </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Route Pickup Point </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Route Pickup Point </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Student Transport Fees </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Student Transport Fees </Link>
         </div>
       </div>
     </div>
@@ -918,13 +918,13 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Hostel Rooms </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Hostel Rooms </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Room Type </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Room Type </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Hostel </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Hostel </Link>
         </div>
       </div>
     </div>
@@ -942,22 +942,22 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Student Certificate </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Student Certificate </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Generate Certificate </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Generate Certificate </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Student ID Card </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Student ID Card </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Generate ID Card </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Generate ID Card </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Staff ID Card </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Staff ID Card </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Generate Staff ID Card </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Generate Staff ID Card </Link>
         </div>
       </div>
     </div>
@@ -975,25 +975,25 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Event </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Event </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Gallery </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Gallery </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; News </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; News </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Media Manager </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Media Manager </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Pages </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Pages </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Menus </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Menus </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Banner Images </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Banner Images </Link>
         </div>
       </div>
     </div>
@@ -1012,10 +1012,10 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Manage Alumni </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Manage Alumni </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Events </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Events </Link>
         </div>
       </div>
     </div>
@@ -1035,49 +1035,49 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; Student Information </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Student Information </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Finance </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Finance </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Attendance </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Attendance </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Examinations </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Examinations </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Online Examinations </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Online Examinations </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Lesson Plan </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Lesson Plan </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Human Resource </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Human Resource </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Homework </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Homework </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Library </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Library </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Inventory </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Inventory </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Transport </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Transport </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Hostel </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Hostel </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Alumni </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Alumni </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; User Log </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; User Log </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Audit Trial Report </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Audit Trial Report </Link>
         </div>
       </div>
     </div>
@@ -1095,76 +1095,76 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> &#187; General Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; General Setting </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Session Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Session Setting </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Notification Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Notification Setting </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; SMS Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; SMS Setting </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Email Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Email Setting </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Payment Methods </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Payment Methods </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Thermal Print </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Thermal Print </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Print Header Footer </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Print Header Footer </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Front CMS Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Front CMS Setting </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Roles Permissions </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Roles Permissions </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Backup Restore </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Backup Restore </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Languages </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Languages </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Currency </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Currency </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Users </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Users </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Addons </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Addons </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Modules </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Modules </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Custom Fields </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Custom Fields </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; Captcha Setting </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Captcha Setting </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; System Fields </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; System Fields </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Student Profile Update </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Student Profile Update </Link>
         </div>
           <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Online Admission </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Online Admission </Link>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> &#187; File Types </button>
+          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; File Types </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; Sidebar Menu </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Sidebar Menu </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  &#187; System Update </button>
+          <Link to="/" className="hover:text-yellow-500 text-white">  &#187; System Update </Link>
         </div>
       </div>
     </div>

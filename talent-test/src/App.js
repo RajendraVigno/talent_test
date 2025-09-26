@@ -19,7 +19,7 @@ function App() {
                         path="/"
                         element={ <>
                             <Header />
-                              <Sidebar />
+                            <Sidebar />
                         </>}
                     />
                      <Route
