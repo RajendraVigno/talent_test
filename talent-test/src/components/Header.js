@@ -4,6 +4,8 @@ import '../index.css';
 import '../App.css';
 import logo from '../assets/image.png';
 import userlcon from '../assets/usericon.jpg';
+import './Sidebar.js';
+import Sidebar from "./Sidebar.js";
 const Header = (props) => {
 const handleCurrencyClick = () => {
       console.log(document.getElementById('currencymenu').style)
@@ -199,6 +201,7 @@ const updateLanguage = (e) => {
 </div>
 </div>
 </nav>
+
   )
 };
 

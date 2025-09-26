@@ -1,7 +1,9 @@
 // src/components/Header.jsx
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router';
 import '../index.css';
 import '../App.css';
+import './Header.js'
 const Sidebar = (props) => {
 const handleMenuCLick = (e) => {
     var target = e.target;
@@ -27,6 +29,21 @@ const handleMenuCLick = (e) => {
    }
   
    buttonelement.classList.toggle("buttonmenu");
+   var expandelements = document.getElementsByClassName("expand");
+   var collapseelements = document.getElementsByClassName("collapser");
+   var expandelement = target.closest(".menubutton").querySelector('.expand');
+   var collapseelement = target.closest(".menubutton").querySelector('.collapser');
+   for (let i = 0; i < expandelements.length; i++)
+   {
+      if(expandelements[i] !== expandelement)
+      {
+        console.log('here broken ' + i)
+          expandelements[i].classList.remove("hidden");
+          collapseelements[i].classList.add("hidden");
+      }
+   }
+   expandelement.classList.toggle("hidden")
+   collapseelement.classList.toggle("hidden");
 
 	 };
 
@@ -59,28 +76,31 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Front Office</span>
+      <span className="expand relative top-[-0.1rem] ml-28"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-28"> &#8964;</span>
+     
     </div>
      <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Admission Enquiry </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Visitor Book </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white">&#187; Phone Call Log </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Postal Dispatch </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Postal Receive </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Complain </button>
         </div>
         <div className="mt-1 mb-2">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Setup Front Office </button>
         </div>
       </div>
     </div>
@@ -93,28 +113,36 @@ const handleMenuCLick = (e) => {
       </svg>
       </div>
       <span className="ml-1">Student Information</span>
+      <span className="expand relative top-[-0.1rem] ml-10 px-3"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-10 px-3"> &#8964;</span>
   </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Student Details </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Student Admission </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Online Admission </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Disabled Students </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Multi Class Student </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Bulk Delete </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Student Categories </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white"> &#187; Student House </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white"> &#187; Disable Reason </button>
         </div>
       </div>
     </div>
@@ -128,27 +156,41 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Fees Collection</span>
+      <span className="expand relative top-[-0.1rem] ml-20 px-2"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-20 px-2"> &#8964;</span>
     </div><div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Collect Fees </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Offline Bank Payments </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Search Fee Payment </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Search Due Fees </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Fees Master </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Quick Fees </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Fees Group </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Fees Type </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Fees Discount </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Fees Carry Forward </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Fees Reminder </button>
         </div>
       </div>
     </div>
@@ -161,28 +203,27 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Online Courses</span>
+      <span className="expand relative top-[-0.1rem] ml-20 px-2"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-20 px-2"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Online Course </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Offline Payment </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Course Category </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Question Bank </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Online Course Receipt </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Setting </button>
         </div>
       </div>
     </div>
@@ -195,28 +236,18 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Multi Branch</span>
+      <span className="expand relative top-[-0.1rem] ml-24 px-2"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-24 px-2"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Overview </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Report </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Setting </button>
         </div>
       </div>
     </div>
@@ -229,27 +260,23 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Gmeet Live Classes</span>
+      <span className="expand relative top-[-0.1rem] ml-12 px-3"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-12 px-3"> &#8964;</span>
     </div><div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Live Classes </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Live Meeting </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Live Classes Report </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Live Meeting Report </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Setting </button>
         </div>
       </div>
     </div>
@@ -262,27 +289,23 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Zoom Live Classes</span>
+      <span className="expand relative top-[-0.1rem] ml-16"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-16"> &#8964;</span>
     </div><div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Live Classes </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Live Meeting </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Live Classes Report </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Live Meeting Report </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Setting </button>
         </div>
       </div>
     </div>
@@ -296,28 +319,21 @@ const handleMenuCLick = (e) => {
 
       </div>
       <span className="ml-1">Behaviour Records</span>
+      <span className="expand relative top-[-0.1rem] ml-14 px-2"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-14 px-2"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Assign Incident </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Incidents </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Reports </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Setting </button>
         </div>
       </div>
     </div>
@@ -331,28 +347,18 @@ const handleMenuCLick = (e) => {
        </svg>
       </div>
       <span className="ml-1">Income</span>
+      <span className="expand relative top-[-0.1rem] ml-36"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-36"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Add Income </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Search Income </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Income Head </button>
         </div>
       </div>
     </div>
@@ -366,28 +372,18 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Expenses</span>
+      <span className="expand relative top-[-0.1rem] ml-32 px-1"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-32 px-1"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
-        <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+         <div>
+          <button className="hover:text-yellow-500 text-white"> &#187; Add Expense </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Search Expense </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Expense Head </button>
         </div>
       </div>
     </div>
@@ -400,28 +396,45 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">CBSE Examinations</span>
+      <span className="expand relative top-[-0.1rem] ml-16"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-16"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Exam </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Exam Schedule </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Print Marksheet </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Exam Grade </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Assign Observation </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Observation </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Observation Parameter </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Assessment </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Term </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Template </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Reports </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Setting </button>
         </div>
       </div>
     </div>
@@ -434,28 +447,36 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Examinations</span>
+      <span className="expand relative top-[-0.1rem] ml-24 px-2"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-24 px-2"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Exam group </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Exam Schedule </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Exam Result</button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Design Admit Card </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Print Admit Card </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Design Marksheet </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Print Marksheet </button>
+        </div>
+         <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Marks Grade </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Marks Division </button>
         </div>
       </div>
     </div>
@@ -469,28 +490,18 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Attendance</span>
+      <span className="expand relative top-[-0.1rem] ml-28 px-1"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-28 px-1"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Student Attendance </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Approve Leave </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Attendance By Date </button>
         </div>
       </div>
     </div>
@@ -510,28 +521,15 @@ const handleMenuCLick = (e) => {
 
       </div>
       <span className="ml-1">QR Code Attendance</span>
+      <span className="expand relative top-[-0.1rem] ml-12"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-12"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Attendance </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Setting </button>
         </div>
       </div>
     </div>
@@ -544,28 +542,15 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Online Examinations</span>
+      <span className="expand relative top-[-0.1rem] ml-12 px-1"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-12 px-1"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Online Exam </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Question Bank </button>
         </div>
       </div>
     </div>
@@ -580,28 +565,33 @@ const handleMenuCLick = (e) => {
 
       </div>
       <span className="ml-1">Academics</span>
+      <span className="expand relative top-[-0.1rem] ml-28 px-2"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-28 px-2"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Class TimeTable </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Teachers TImeTable </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Assign Class Teacher </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Promote Students </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Subject Group </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Subjects </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Class </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Sections </button>
         </div>
       </div>
     </div>
@@ -616,28 +606,15 @@ const handleMenuCLick = (e) => {
 
       </div>
       <span className="ml-1">Annual Calendar</span>
+      <span className="expand relative top-[-0.1rem] ml-20"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-20"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Annual Calendar </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Holiday Type </button>
         </div>
       </div>
     </div>
@@ -650,28 +627,24 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Lesson Plan</span>
+      <span className="expand relative top-[-0.1rem] ml-28"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-28"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Copy Old Lessons </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Manage Lesson Plan </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Manage Syllabus Status </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Lesson </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Topic </button>
         </div>
       </div>
     </div>
@@ -684,28 +657,39 @@ const handleMenuCLick = (e) => {
       </svg>
       </div>
       <span className="ml-1">Human Resource</span>
+      <span className="expand relative top-[-0.1rem] ml-16 px-2"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-16 px-2"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <Link to="/hrstaff" className="hover:text-yellow-500 text-white"> &#187; Staff Directory </Link>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Staff Attendance </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Payroll </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Approve Leave Request </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Apply Leave </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Leave Type </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Teachers Rating </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Department </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Designation </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Disabled Staff </button>
         </div>
       </div>
     </div>
@@ -718,28 +702,33 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Communicate</span>
+      <span className="expand relative top-[-0.1rem] ml-24"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-24"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Notice Board </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Send Email </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Send SMS </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Email/SMS Log </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Schedule Email SMS Log </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Login Credentials Send </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Email Template </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; SMS Template </button>
         </div>
       </div>
     </div>
@@ -754,28 +743,21 @@ const handleMenuCLick = (e) => {
 
       </div>
       <span className="ml-1">Download Center</span>
+      <span className="expand relative top-[-0.1rem] ml-16 px-2"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-16 px-2"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Content Type </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Content Share List </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Upload/Share Content </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Video Tutorial </button>
         </div>
       </div>
     </div>
@@ -789,28 +771,15 @@ const handleMenuCLick = (e) => {
 
       </div>
       <span className="ml-1">Homework</span>
+      <span className="expand relative top-[-0.1rem] ml-28 px-1"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-28 px-1"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Add Homework </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Daily Assignment </button>
         </div>
       </div>
     </div>
@@ -823,28 +792,21 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Library</span>
+      <span className="expand relative top-[-0.1rem] ml-36"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-36"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Book List </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Issue - Return </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Add Student </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Add Staff Member </button>
         </div>
       </div>
     </div>
@@ -859,28 +821,27 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Inventory</span>
+      <span className="expand relative top-[-0.1rem] ml-28 px-3"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-28 px-3"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Issue Item </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Add Item Stock </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Add Item </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Item Category </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Item Store </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Item Supplier </button>
         </div>
       </div>
     </div>
@@ -893,28 +854,15 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Student CV</span>
+      <span className="expand relative top-[-0.1rem] ml-28"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-28"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Build CV </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Download CV </button>
         </div>
       </div>
     </div>
@@ -929,28 +877,30 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Transport</span>
+      <span className="expand relative top-[-0.1rem] ml-28 px-3"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-28 px-3"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Fees Master </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Pickup Point </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Routes </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Vehicles </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Assign Vehicle </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Route Pickup Point </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Student Transport Fees </button>
         </div>
       </div>
     </div>
@@ -963,28 +913,18 @@ const handleMenuCLick = (e) => {
       </svg>
       </div>
       <span className="ml-1">Hostel</span>
+      <span className="expand relative top-[-0.1rem] ml-36"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-36"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Hostel Rooms </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Room Type </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Hostel </button>
         </div>
       </div>
     </div>
@@ -997,28 +937,27 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Certificate</span>
+      <span className="expand relative top-[-0.1rem] ml-28 px-2"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-28 px-2"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Student Certificate </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Generate Certificate </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Student ID Card </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Generate ID Card </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Staff ID Card </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Generate Staff ID Card </button>
         </div>
       </div>
     </div>
@@ -1031,28 +970,30 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Front CMS</span>
+      <span className="expand relative top-[-0.1rem] ml-28 px-1"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-28 px-1"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Event </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Gallery </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; News </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Media Manager </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Pages </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Menus </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Banner Images </button>
         </div>
       </div>
     </div>
@@ -1066,28 +1007,15 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Alumni</span>
+      <span className="expand relative top-[-0.1rem] ml-32 px-3"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-32 px-3"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Manage Alumni </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
-        </div>
-         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
-        </div>
-        <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Events </button>
         </div>
       </div>
     </div>
@@ -1102,28 +1030,54 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">Reports</span>
+      <span className="expand relative top-[-0.1rem] ml-32 px-2"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-32 px-2"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Student Information </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Finance </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Attendance </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Examinations </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Online Examinations </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Lesson Plan </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Human Resource </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Homework </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Library </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Inventory </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Transport </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Hostel </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Alumni </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; User Log </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Audit Trial Report </button>
         </div>
       </div>
     </div>
@@ -1136,34 +1090,89 @@ const handleMenuCLick = (e) => {
         </svg>
       </div>
       <span className="ml-1">System Setting</span>
+      <span className="expand relative top-[-0.1rem] ml-20 px-1"> &#x3c;</span>
+      <span className="hidden collapser relative top-[-0.2rem] ml-20 px-1"> &#8964;</span>
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <button className="hover:text-yellow-500 text-white"> Admission Enquiry </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; General Setting </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Visitor Book </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Session Setting </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Phone Call Log </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Notification Setting </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Postal Dispatch </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; SMS Setting </button>
         </div>
          <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white"> Postal Receive </button>
+          <button className="hover:text-yellow-500 text-white"> &#187; Email Setting </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Complain </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Payment Methods </button>
         </div>
         <div className="mt-1">
-          <button className="hover:text-yellow-500 text-white">  Setup Front Office </button>
+          <button className="hover:text-yellow-500 text-white">  &#187; Thermal Print </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Print Header Footer </button>
+        </div>
+         <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white"> &#187; Front CMS Setting </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Roles Permissions </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Backup Restore </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Languages </button>
+        </div>
+         <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white"> &#187; Currency </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Users </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Addons </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Modules </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Custom Fields </button>
+        </div>
+         <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white"> &#187; Captcha Setting </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; System Fields </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Student Profile Update </button>
+        </div>
+          <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Online Admission </button>
+        </div>
+         <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white"> &#187; File Types </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; Sidebar Menu </button>
+        </div>
+        <div className="mt-1">
+          <button className="hover:text-yellow-500 text-white">  &#187; System Update </button>
         </div>
       </div>
     </div>
 
 
   </nav>
+
+  
 </div>
 
 
