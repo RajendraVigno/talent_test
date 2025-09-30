@@ -13,13 +13,17 @@ import {
 function App() {
   return (
      <Router>
+          <div className="App bg-gray-200">
+              <Header />
+              <div className ="flex">
+              <Sidebar/>
                 <Routes>
                     <Route
                         exact
                         path="/"
                         element={ <>
-                            <Header />
-                            <Sidebar />
+                            {/* <Header /> */}
+                            {/* <Sidebar /> */}
                         </>}
                     />
                      <Route
@@ -27,15 +31,22 @@ function App() {
                         path="/hrstaff"
                         element={
                         <>
-                            <Header />
-                            <div className='flex'> 
-                              <Sidebar />
+                             <HRSearch />
+                        </>
+                      }
+                    />
+                    <Route
+                        exact
+                        path="/copyoldlessons"
+                        element={
+                        <>
                               <HRSearch />
-                            </div>
                         </>
                       }
                     />
            </Routes>
+           </div>
+           </div>
         </Router>
    
   );

@@ -49,9 +49,9 @@ const handleMenuCLick = (e) => {
 
   return (
 
-<div class="relative flex w-full max-w-[18rem] flex-col rounded-xl bg-gray-800 bg-clip-border p-4 text-gray-700 shadow-xl shadow-blue-gray-900/5">
+<div class="scrollbar-thin overflow-y-scroll relative flex w-full h-[calc(100vh-50px)] max-w-[18rem] flex-col rounded-xl bg-gray-800 bg-clip-border text-gray-700 shadow-xl shadow-blue-gray-900/5">
   <nav class="bg-gray flex min-w-[240px] flex-col font-sans text-base font-normal text-blue-gray-700">
-    <div onClick={handleMenuCLick} role="button" className="menubutton hover:text-yellow-500 hover:opacity-50 flex items-center w-full leading-tight transition-all rounded-lg outline-none text-start text-white">
+    <div onClick={handleMenuCLick} role="button" className=" px-2 menubutton hover:text-yellow-500 hover:opacity-50 flex items-center w-full leading-tight transition-all rounded-lg outline-none text-start text-white">
       Current Session: 2025-2026
       <div className="ml-2">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -60,7 +60,7 @@ const handleMenuCLick = (e) => {
       </div>
     </div>
 
-    <div role="button" className="menubutton hover:text-yellow-500 hover:opacity-50 flex items-center w-full leading-tight transition-all rounded-lg outline-none text-start text-white border-b-2 border-opacity-20 pb-4 border-white">
+    <div role="button" className="px-2 menubutton hover:text-yellow-500 hover:opacity-50 flex items-center w-full leading-tight transition-all rounded-lg outline-none text-start text-white border-b-2 border-opacity-20 pb-4 border-white">
       Quick Links
       <div className="ml-2">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -632,7 +632,7 @@ const handleMenuCLick = (e) => {
     </div>
     <div className="bg-black opacity-60 flex hidden w-full pl-12 bg-black-500 submenu hover:text-yellow-900">
         <div>
-          <Link to="/" className="hover:text-yellow-500 text-white"> &#187; Copy Old Lessons </Link>
+          <Link to="/copyoldlessons" className="hover:text-yellow-500 text-white"> &#187; Copy Old Lessons </Link>
         </div>
         <div className="mt-1">
           <Link to="/" className="hover:text-yellow-500 text-white">  &#187; Manage Lesson Plan </Link>
